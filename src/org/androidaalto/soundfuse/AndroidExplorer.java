@@ -118,7 +118,7 @@ public class AndroidExplorer extends ListActivity {
             }
         } else {
             // Found a supported file type. Return the full path of the file to
-            // the caller activity (BoardActivity).//
+            // the caller activity (BoardActivity).///
             Intent resultIntent = new Intent(getApplicationContext(), BoardActivity.class);
             resultIntent.putExtra("path", file.getPath());
             setResult(Activity.RESULT_OK, resultIntent);
