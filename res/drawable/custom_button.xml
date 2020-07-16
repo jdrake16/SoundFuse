@@ -7,8 +7,8 @@
         android:state_checked="true">
         <shape>
             <gradient
-                android:startColor="#95C03B"
-                android:endColor="#D6E7B3"
+                android:startColor="#b19cd9"
+                android:endColor="#add8e6"
                 android:angle="270" />
             <stroke
                 android:width="1dp"
@@ -27,7 +27,7 @@
     <item>
         <shape>
             <gradient
-                android:startColor="#666666"
+                android:startColor="#000000"
                 android:endColor="#999999"
                 android:angle="270" />
             <stroke
