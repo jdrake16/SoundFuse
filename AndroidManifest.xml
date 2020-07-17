@@ -49,7 +49,7 @@
         <activity
             android:name="AndroidExplorer"
             android:label="Select file"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="fullSensor" >
         </activity>
         <activity
             android:name="Preferences"
