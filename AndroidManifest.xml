@@ -43,6 +43,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -51,15 +53,18 @@
             android:label="Select file"
             android:screenOrientation="fullSensor" >
         </activity>
+
         <activity
             android:name="Preferences"
             android:label="Preferences" >
         </activity>
+
         <activity
             android:name="AddColumnPicker"
             android:label="Add column"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
+
     </application>
 
 </manifest>

@@ -91,39 +91,39 @@ public class BoardActivity extends Activity {
         super.onResume();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Log.e("TEST", "Menu item click");
-        switch (item.getItemId()) {
-            case R.id.select_sample:
-                // file picker
-                Intent i = new Intent(BoardActivity.this, AndroidExplorer.class);
-                startActivityForResult(i, 0);
-                break;
-            case R.id.toggle_sequencer:
-                sequencer.toggle();
-                break;
-            case R.id.preferences:
-                Intent preferencesActivity = new Intent(getBaseContext(), Preferences.class);
-                startActivityForResult(preferencesActivity, 1);
-                break;
-            case R.id.add_column:
-                Log.e("TEST", "Adding columns");
-                Intent addColumnActivity = new Intent(getBaseContext(), AddColumnPicker.class);
-                startActivityForResult(addColumnActivity, 2);
-                // sequencer.addColumns(amount);
-                break;
-        }
-        return false;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        super.onCreateOptionsMenu(menu);
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.menu, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        Log.e("TEST", "Menu item click");
+//        switch (item.getItemId()) {
+//            case R.id.select_sample:
+//                // file picker
+//                Intent i = new Intent(BoardActivity.this, AndroidExplorer.class);
+//                startActivityForResult(i, 0);
+//                break;
+//            case R.id.toggle_sequencer:
+//                sequencer.toggle();
+//                break;
+//            case R.id.preferences:
+//                Intent preferencesActivity = new Intent(getBaseContext(), Preferences.class);
+//                startActivityForResult(preferencesActivity, 1);
+//                break;
+//            case R.id.add_column:
+//                Log.e("TEST", "Adding columns");
+//                Intent addColumnActivity = new Intent(getBaseContext(), AddColumnPicker.class);
+//                startActivityForResult(addColumnActivity, 2);
+//                // sequencer.addColumns(amount);
+//                break;
+//        }
+//        return false;
+//    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

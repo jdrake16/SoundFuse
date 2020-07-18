@@ -182,7 +182,7 @@ public class NumberPicker extends LinearLayout implements OnClickListener, OnFoc
     /**
      * Set the range of numbers allowed for the number picker. The current value
      * will be automatically set to the start.
-     * 
+     *
      * @param start the start of the range (inclusive)
      * @param end the end of the range (inclusive)
      */
@@ -197,7 +197,7 @@ public class NumberPicker extends LinearLayout implements OnClickListener, OnFoc
      * Set the range of numbers allowed for the number picker. The current value
      * will be automatically set to the start. Also provide a mapping for values
      * used to display to the user.
-     * 
+     *
      * @param start the start of the range (inclusive)
      * @param end the end of the range (inclusive)
      * @param displayedValues the values displayed to the user.
