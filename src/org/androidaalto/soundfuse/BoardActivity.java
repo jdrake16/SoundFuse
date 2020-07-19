@@ -149,7 +149,7 @@ public class BoardActivity extends Activity {
                 if (resultCode == 1) {
                     // Coming from preferences
                     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-                    String newBpm = prefs.getString("bpm", "120");
+                    String newBpm = prefs.getString("bpm", "75");
                     Log.e("TEST", "new bpm is " + Integer.parseInt(newBpm));
                     sequencer.setBpm(Integer.parseInt(newBpm));
                 }
