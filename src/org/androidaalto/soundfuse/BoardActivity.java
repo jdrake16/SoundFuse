@@ -125,44 +125,44 @@ public class BoardActivity extends Activity {
 //        return false;
 //    }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        switch (requestCode) {
-            case 0:
-                if (resultCode == Activity.RESULT_OK) {
-                    String path = data.getStringExtra("path");
-                    Log.i("ANDROIDEXPLORER", "path: " + path);
-                    // reset the latest sample
-                    sequencer.setSample(3, path);
-                    // TODO it should actually add a new sample rather than
-                    // overwriting an existing one
-                    // TODO rethink the ui so it allows addition/removing
-                    // samples on
-                    // runtime
-                } else if (resultCode == RESULT_CANCELED) {
-                    // User didn't select a file. Nothing to do here.
-                }
-                break;
-            case 1:
-                if (resultCode == 1) {
-                    // Coming from preferences
-                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-                    String newBpm = prefs.getString("bpm", "75");
-                    Log.e("TEST", "new bpm is " + Integer.parseInt(newBpm));
-                    sequencer.setBpm(Integer.parseInt(newBpm));
-                }
-                break;
-            case 2:
-                Bundle b = data.getExtras();
-                int amount = b.getInt("amount");
-                Log.e("TEST", "Adding " + amount + " columns");
-                break;
-            default:
-                break;
-        }
-    }
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        switch (requestCode) {
+//            case 0:
+//                if (resultCode == Activity.RESULT_OK) {
+//                    String path = data.getStringExtra("path");
+//                    Log.i("ANDROIDEXPLORER", "path: " + path);
+//                    // reset the latest sample
+//                    sequencer.setSample(3, path);
+//                    // TODO it should actually add a new sample rather than
+//                    // overwriting an existing one
+//                    // TODO rethink the ui so it allows addition/removing
+//                    // samples on
+//                    // runtime
+//                } else if (resultCode == RESULT_CANCELED) {
+//                    // User didn't select a file. Nothing to do here.
+//                }
+//                break;
+//            case 1:
+//                if (resultCode == 1) {
+//                    // Coming from preferences
+//                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+//                    String newBpm = prefs.getString("bpm", "75");
+//                    Log.e("TEST", "new bpm is " + Integer.parseInt(newBpm));
+//                    sequencer.setBpm(Integer.parseInt(newBpm));
+//                }
+//                break;
+//            case 2:
+//                Bundle b = data.getExtras();
+//                int amount = b.getInt("amount");
+//                Log.e("TEST", "Adding " + amount + " columns");
+//                break;
+//            default:
+//                break;
+//        }
+//    }
 
     private void prepareBoard() {
         createLayouts();
